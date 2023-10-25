@@ -16,6 +16,8 @@
        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+      
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   </head>
   <body>
 
@@ -30,15 +32,15 @@
         <li class="nav-item">
          
         </li>
-        <img class="logo" src="prime%20video%20logo-PhotoRoom.png-PhotoRoom%20copia.png">  
+       <a href="index.html"><img class="logo-link" src="prime%20video%20logo-PhotoRoom.png-PhotoRoom%20copia.png"> </a>
         <li class="nav-item">
-          <a class="nav-link fw-bold" href="#">Series</a>
+          <a class="nav-link fw-bold" href="series.html">Series</a>
         </li>
          <li class="nav-item">
-          <a class="nav-link fw-bold" href="#">Peliculas</a>
+          <a class="nav-link fw-bold" href="peliculas.html">Peliculas</a>
         </li>
          <li class="nav-item">
-          <a class="nav-link fw-bold" href="#">Mi lista</a>
+          <a class="nav-link fw-bold" href="milista.html">Mi lista</a>
         </li>
         <li class="nav-item dropdown">
          
@@ -54,12 +56,15 @@
         
         </li>
       </ul>
-      <form class="d-flex" role="search">
+     <nav class="buscar" style="margin-bottom:35px; "> <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-dark" type="submit">Buscar</button>
-      </form>
+          <a href="login.html"><i class="fas fa-user" style="color: #1A1A2D; margin-right: 5px; padding: 10px;padding-left: 25px; width: 20px"></i></a>
+         </form></nav>
     </div>
+       
   </div>
+   
 </nav>
 
 <nav class="navbar navbar-expand-lg ">
@@ -74,25 +79,25 @@
         </li>
        
         <li class="nav-item">
-          <a class="nav-link1 fw-bold" href="#">Acción</a>
+          <a class="nav-link1 fw-bold" href="accion.html">Acción</a>
         </li>
          <li class="nav-item">
-          <a class="nav-link1 fw-bold" href="#">Comedia</a>
+          <a class="nav-link1 fw-bold" href="comedia.html">Comedia</a>
         </li>
          <li class="nav-item">
-          <a class="nav-link1 fw-bold" href="#">Documental</a>
+          <a class="nav-link1 fw-bold" href="documental.html">Documental</a>
         </li>
          <li class="nav-item">
-          <a class="nav-link1 fw-bold" href="#">Drama</a>
+          <a class="nav-link1 fw-bold" href="drama.html">Drama</a>
         </li>
           <li class="nav-item">
-          <a class="nav-link1 fw-bold" href="#">Terror</a>
+          <a class="nav-link1 fw-bold" href="terror.html">Terror</a>
         </li>
           <li class="nav-item">
-          <a class="nav-link1 fw-bold" href="#">Niños</a>
+          <a class="nav-link1 fw-bold" href="ninos.html">Niños</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link1 fw-bold" href="#">Romance</a>
+          <a class="nav-link1 fw-bold" href="romance.html">Romance</a>
         </li>
         <li class="nav-item dropdown">
          
@@ -690,6 +695,24 @@ $('.carousel .carousel-item').each(function(){
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+      <script>$('.carousel .carousel-item').each(function(){
+    var minPerSlide = 4;
+    var next = $(this).next();
+    if (!next.length) {
+    next = $(this).siblings(':first');
+    }
+    next.children(':first-child').clone().appendTo($(this));
+    
+    for (var i=0;i<minPerSlide;i++) {
+        next=next.next();
+        if (!next.length) {
+        	next = $(this).siblings(':first');
+      	}
+        
+        next.children(':first-child').clone().appendTo($(this));
+      }
+});
+</script>
        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
   </body>
 
